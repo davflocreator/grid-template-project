@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #c8c8c8;
+}
+.container {
+  margin-top: 10px;
+  margin-left: 20px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: center;
+  align-content: center;
+  height: 800px;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+}
+.first {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: daniel;
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+  background-size: 169px;
+}
+.second {
+  background-color: hsl(217, 19%, 35%);
+  grid-area: jonathan;
+}
+.third {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: jeanette;
+}
+.fourth {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: patrick;
+}
+.fifth {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: kira;
+}
+img {
+  border-radius: 100%;
+  margin: 10px 0 0 10px;
+  display: relative;
+}
+.quotation {
+  border-radius: none;
+  margin: 0;
+  display: absolute;
+}
+h1 {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: white;
+  vertical-align: middle;
+  position: absolute;
+  margin-left: 69px;
+  margin-top: 10px;
+}
+h2 {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: #696969;
+  opacity: 0.5;
+  position: absolute;
+  margin-left: 69px;
+  margin-top: 40px;
+}
+h3 {
+  color: white;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+p {
+  color: white;
+
+  font-size: 0.9rem;
+}
+.blacktext {
+  color: #383838;
+}
+.item {
+  display: inline-grid;
+  border-radius: 10px;
+  padding: 30px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.padding {
+  padding: 1rem;
+  margin: 0;
+}
+.attribution {
+  margin-top: 100px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+.grey {
+  color: #696969;
+}
+@media screen and (min-width: 400px) and (max-width: 1000px) {
+  .container {
+    margin-top: 820px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira";
+  }
+  .first {
+    grid-area: daniel;
+  }
+  .second {
+    grid-area: jonathan;
+  }
+  .third {
+    grid-area: jeanette;
+  }
+  .fourth {
+    grid-area: patrick;
+  }
+  .fifth {
+    grid-area: kira;
+  }
+  .attribution {
+    position: sticky;
+    bottom: 0;
+    margin-top: 810px;
+  }
+}
